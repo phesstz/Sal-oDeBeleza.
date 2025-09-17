@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/agendamento.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <a href="inicio.html" class="navbar-home" aria-label="Página inicial">
+        <svg viewBox="0 0 24 24">
+          <path
+            d="M3 10.5V20a1 1 0 0 0 1 1h5v-6h6v6h5a1 1 0 0 0 1-1V10.5l-9-7-9 7z"
+            fill="none"
+            stroke="#fff"
+            stroke-width="2"
+          />
+        </svg>
+      </a>
+    </div>
+    <div class="container">
+      <div class="title">AGENDAMENTO</div>
+      <form>
+        <label for="nome">Nome Completo</label>
+        <input
+          type="text"
+          id="nome"
+          name="nome"
+          placeholder="Seu Nome"
+          required
+          autocomplete="name"
+        />
+
+        <label for="telefone">Telefone</label>
+        <input
+          type="tel"
+          id="telefone"
+          name="telefone"
+          placeholder="Seu Telefone"
+          required
+          autocomplete="tel"
+        />
+
+        <label for="servico">Qual Serviço?</label>
+        <select id="servico" name="servico" required>
+          <option value="">Selecione</option>
+          <option>Escovação</option>
+          <option>Corte</option>
+          <option>Pintura</option>
+          <option>Hidratação</option>
+        </select>
+
+        <label for="pagamento">Forma De Pagamento?</label>
+        <select id="pagamento" name="pagamento" required>
+          <option value="">Selecione</option>
+          <option>Pix</option>
+          <option>Dinheiro</option>
+          <option>Cartão</option>
+        </select>
+
+        <label for="data">Qual Horário?</label>
+        <div class="row">
+          <input type="date" id="data" name="data" required />
+          <input type="time" id="hora" name="hora" required />
+        </div>
+
+        <button type="button" class="btn-agendar" onclick="window.location.href='pagamento.html'">AGENDAR</button>
+      </form>
+    </div>
+  </body>
+</html>
