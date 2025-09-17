@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/pagamento.css">
+</head>
+<body>
+        <div class="navbar">
+        <a href="agendamento.html" class="navbar-home" aria-label="Página inicial">
+            <svg viewBox="0 0 24 24"><path d="M3 10.5V20a1 1 0 0 0 1 1h5v-6h6v6h5a1 1 0 0 0 1-1V10.5l-9-7-9 7z" fill="none" stroke="#fff" stroke-width="2"/></svg>
+        </a>
+    </div>
+    <div class="container">
+        <div class="header">
+            <div class="header-title">TELA DE PAGAMENTO</div>
+            <div class="header-subtitle">Agora é hora de fazer o PIX</div>
+        </div>
+        <div class="content">
+            <div class="instructions">
+                <div class="instructions-title">INSTRUÇÕES</div>
+                <ul class="instructions-list">
+                    <li><span class="number">1</span>Copie o código que geramos ao lado.</li>
+                    <li><span class="number">2</span>Abra o app do seu banco, na seção PIX</li>
+                    <li><span class="number">3</span>No app do seu banco vá na opção “PIX copia e cola” e cole o código que você copiou.</li>
+                    <li><span class="number">4</span>Confirme o valor, e efetue o pagamento.</li>
+                </ul>
+            </div>
+            <div class="divider"></div>
+            <div class="pix-area">
+                <div class="pix-qr">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=chave-pix-exemplo-1234567890" alt="QR Code PIX" width="220" height="220">
+                </div>
+                <div class="pix-code" id="pixCode">chave-pix-exemplo-1234567890</div>
+                <button class="copy-btn" onclick="copyPixCode()">
+                    <svg viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="3" width="13" height="13" rx="2" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+                    COPIAR E COLAR
+                </button>
+                <button class="done-btn" onclick="window.location.href='agendamento.html'">
+                    <svg viewBox="0 0 24 24"><path d="M3 12l6 6L21 6" fill="none" stroke="#fff" stroke-width="2"/></svg>
+                    JÁ FIZ PAGAMENTO
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
